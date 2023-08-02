@@ -1,6 +1,8 @@
 #include <stdio.h>
-void main(){
+void main()
+{
     int array[3][2]={{1,5,},{1,9},{5,2}};
+
     int even=0,odd=0;
     for(int g=0;g<3;g++){
         for(int k=0;k<2;k++){
