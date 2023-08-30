@@ -1,30 +1,25 @@
 // program to concat two singly LL
-import java.io.*;
-
 class Node {
 	int data;
 	Node next;
 
 	// Constructor
-	public Node(int data)
-	{
+	public Node(int data) {
 		this.data = data;
 		this.next = null;
 	}
 }
 
-class LLC{
+class LLC {
 
-	public static Node insertAtTail(Node head1, Node tail1, int data)
-	{
+	public static Node insertAtTail(Node head1, Node tail1, int data) {
 		Node temp = new Node(data);
 		tail1.next = temp;
 		tail1 = temp;
 		return tail1;
 	}
 
-	public static void print(Node head)
-	{
+	public static void print(Node head) {
 		Node temp = head;
 		while (temp != null) {
 			System.out.print(temp.data + " ");
@@ -33,13 +28,11 @@ class LLC{
 		System.out.println();
 	}
 
-	public static void concat(Node head1, Node head2, Node tail1)
-	{
+	public static void concat(Node head1, Node head2, Node tail1) {
 		tail1.next = head2;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Node node1 = new Node(1);
 		Node head1 = node1;
 		Node tail1 = node1;
@@ -67,7 +60,7 @@ class LLC{
 		concat(head1, head2, tail1);
 
 		System.out.println(
-			"First Linked List after concatenation: ");
+				"First Linked List after concatenation: ");
 		print(head1);
 	}
 }

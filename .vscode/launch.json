@@ -2,6 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "stack",
+      "request": "launch",
+      "mainClass": "stack",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
+      "name": "queue",
+      "request": "launch",
+      "mainClass": "queue",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
+      "name": "LLC",
+      "request": "launch",
+      "mainClass": "LLC",
+      "projectName": "Labs_17717e84"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
