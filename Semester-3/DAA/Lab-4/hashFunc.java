@@ -11,6 +11,11 @@ class HashTable {
         table = new int[size];
         isOccupied = new boolean[size];
         Arrays.fill(isOccupied, false);
+        // if(isOccupied != null) {
+        //     for(int i = 0; i < isOccupied.length; i++) {
+        //         isOccupied[i] = false;
+        //     }
+        // }
     }
 
     private int hashFunction(int key) {
