@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HashTable",
+      "request": "launch",
+      "mainClass": "HashTable",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
+      "name": "hashFunc",
+      "request": "launch",
+      "mainClass": "hashFunc",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
       "name": "stack",
       "request": "launch",
       "mainClass": "stack",
