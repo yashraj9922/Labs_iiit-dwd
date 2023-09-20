@@ -5,28 +5,34 @@ between the two complex numbers by overloading the + operator. Finally display t
 #include <iostream>
 using namespace std;
 
-class Complex{
+class Complex
+{
     int real, imaginary;
-    public:
-        void input(){
-            cout << "Enter real part: ";
-            cin >> real;
-            cout << "Enter imaginary part: ";
-            cin >> imaginary;
-        }
-        void display(){
-            cout << real << " + " << imaginary << "i" << endl;
-        }
 
-        Complex operator+(Complex c){
-            Complex temp;
-            temp.real = real + c.real;
-            temp.imaginary = imaginary + c.imaginary;
-            return temp;
-        }
+public:
+    void input()
+    {
+        cout << "Enter real part: ";
+        cin >> real;
+        cout << "Enter imaginary part: ";
+        cin >> imaginary;
+    }
+    void display()
+    {
+        cout << real << " + " << imaginary << "i" << endl;
+    }
+
+    Complex operator+(Complex c)
+    {
+        Complex temp;
+        temp.real = real + c.real;
+        temp.imaginary = imaginary + c.imaginary;
+        return temp;
+    }
 };
 
-int main(){
+int main()
+{
     Complex c1, c2, c3;
     c1.input();
     c2.input();
