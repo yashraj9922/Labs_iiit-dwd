@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "inOrderTraversalUsingStack",
+      "request": "launch",
+      "mainClass": "inOrderTraversalUsingStack",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
+      "name": "BinaryTree",
+      "request": "launch",
+      "mainClass": "BinaryTree",
+      "projectName": "Labs_17717e84"
+    },
+    {
+      "type": "java",
       "name": "HashTable",
       "request": "launch",
       "mainClass": "HashTable",
