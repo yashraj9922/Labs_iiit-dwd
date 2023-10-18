@@ -1,5 +1,5 @@
 // implementing MIN-HEAP data structure using array
-// Time complexity is O(n * log(n))....since each call to Heapify costs O(log(n))  and Build-Heap makes O(n)  
+// Time complexity of algorithm below is O(n * log(n))....since each call to Heapify costs O(log(n))  and Build-Heap makes O(n)  
 
 import java.util.Scanner;
 

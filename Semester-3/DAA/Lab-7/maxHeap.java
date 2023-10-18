@@ -1,3 +1,6 @@
+// implementing MAX-HEAP data structure using array
+// Time complexity of algorithm below is O(n * log(n))....since each call to Heapify costs O(log(n))  and Build-Heap makes O(n)  
+
 import java.util.Scanner;
 
 public class maxHeap {
@@ -31,18 +34,18 @@ public class maxHeap {
         int largest = i;
         int l = 2 * i + 1;
         int r = 2 * i + 2;
-  
+
         if (l < n && arr[l] > arr[largest])
             largest = l;
-  
+
         if (r < n && arr[r] > arr[largest])
             largest = r;
-  
+
         if (largest != i) {
             int temp = arr[i];
             arr[i] = arr[largest];
             arr[largest] = temp;
-  
+
             heapify(arr, n, largest);
         }
     }
@@ -50,7 +53,7 @@ public class maxHeap {
     public static void printArray(int[] arr, int n) {
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
-  
+
         System.out.println();
-    }   
+    }
 }
