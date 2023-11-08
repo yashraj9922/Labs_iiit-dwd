@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PrimsMST",
+      "request": "launch",
+      "mainClass": "PrimsMST",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
+      "name": "mst_prims",
+      "request": "launch",
+      "mainClass": "mst_prims",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
       "name": "inOrderTraversalUsingStack",
       "request": "launch",
       "mainClass": "inOrderTraversalUsingStack",
