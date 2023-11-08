@@ -7,12 +7,12 @@ import java.util.Arrays;
 public class PrimsMST {
     public static void main(String[] args) {
         int[][] graph = {
-            {0, 3, 0, 0, 6, 5},
-            {3, 0, 1, 0, 0, 4},
-            {0, 1, 0, 6, 0, 4},
-            {0, 0, 6, 0, 8, 5},
-            {6, 0, 0, 8, 0, 2},
-            {5, 4, 4, 5, 2, 0}
+                { 0, 3, 0, 0, 6, 5 },
+                { 3, 0, 1, 0, 0, 4 },
+                { 0, 1, 0, 6, 0, 4 },
+                { 0, 0, 6, 0, 8, 5 },
+                { 6, 0, 0, 8, 0, 2 },
+                { 5, 4, 4, 5, 2, 0 }
         };
 
         int n = graph.length;
@@ -24,6 +24,8 @@ public class PrimsMST {
         Arrays.fill(mstSet, false);
 
         key[0] = 0; // Start from the first vertex
+
+        long startTime = System.nanoTime();
 
         for (int i = 0; i < n - 1; i++) {
             int u = minKey(key, mstSet);
@@ -37,8 +39,13 @@ public class PrimsMST {
             }
         }
 
+        long endTime = System.nanoTime();
+        long elapsedTime = endTime - startTime;
+
         printMST(parent, graph);
         mstValue(parent, graph);
+
+        System.out.println("Execution Time (ns): " + elapsedTime);
     }
 
     public static int minKey(int[] key, boolean[] mstSet) {
@@ -71,12 +78,10 @@ public class PrimsMST {
     }
 }
 
-
-
 // Enter the number of vertices
 // 4
 // Enter the adjacency matrix
-// 0 3 0 7 
+// 0 3 0 7
 // 8 0 2 0
 // 5 0 0 1
 // 2 0 0 0
