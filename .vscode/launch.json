@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "shortestPathDijkastra",
+      "request": "launch",
+      "mainClass": "shortestPathDijkastra",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
+      "name": "dijkstra",
+      "request": "launch",
+      "mainClass": "dijkstra",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
+      "name": "dijkastra",
+      "request": "launch",
+      "mainClass": "dijkastra",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
       "name": "PrimsMST",
       "request": "launch",
       "mainClass": "PrimsMST",
