@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LongestSubsequence",
+      "request": "launch",
+      "mainClass": "LongestSubsequence",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
       "name": "shortestPathDijkastra",
       "request": "launch",
       "mainClass": "shortestPathDijkastra",
