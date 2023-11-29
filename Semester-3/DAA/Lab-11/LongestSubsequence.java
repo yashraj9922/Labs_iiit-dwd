@@ -1,9 +1,19 @@
 // write a java code to find a longest common subsequence and print the table which you have used to find the longest common subsequence.
 
+import java.util.Scanner;
+
 public class LongestSubsequence {
     public static void main(String[] args) {
-        String s1 = "AGGTAB";
-        String s2 = "GXTXAYB";
+
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the first string: ");
+        String s1 = sc.nextLine();
+        // String s1 = "AGGTAB";
+
+        System.out.println("Enter the second string: ");
+        String s2 = sc.nextLine();
+        // String s2 = "GXTXAYB";
 
         int m = s1.length();
         int n = s2.length();
