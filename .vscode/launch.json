@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StudentDatabase",
+      "request": "launch",
+      "mainClass": "StudentDatabase",
+      "projectName": "Labs_8f009e3f"
+    },
+    {
+      "type": "java",
       "name": "LongestSubsequence",
       "request": "launch",
       "mainClass": "LongestSubsequence",
