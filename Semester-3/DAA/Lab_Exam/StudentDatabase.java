@@ -8,6 +8,7 @@
 // Sorting Algorithm: heap sort
 // Searching Algorithm: binary search */
 // display sorted student details
+// sorting using quick sort as well as merge sort
 
 import java.util.Scanner;
 
@@ -28,6 +29,107 @@ class Student {
 }
 
 public class StudentDatabase {
+
+    public static void quickSort(Student[] arr, int low, int high) {
+        if (low < high) {
+            // pi is partitioning index, arr[pi] is now at right place
+            int pi = partition(arr, low, high);
+
+            // Recursively sort elements before partition and after partition
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+
+    public static int partition(Student[] arr, int low, int high) {
+        // pivot (Element to be placed at right position)
+        Student pivot = arr[high];
+
+        int i = low - 1; // Index of smaller element
+
+        for (int j = low; j < high; j++) {
+            // If current element is smaller than or equal to pivot
+            if (arr[j].studentID <= pivot.studentID) {
+                i++;
+
+                // Swap arr[i] and arr[j]
+                Student temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        // Swap arr[i + 1] and arr[high] (or pivot)
+        Student temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        return i + 1;
+    }
+
+    public static void mergeSort(Student[] arr, int left, int right) {
+        if (left < right) {
+            // Find the middle point
+            int mid = (left + right) / 2;
+
+            // Sort first and second halves
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+
+            // Merge the sorted halves
+            merge(arr, left, mid, right);
+        }
+    }
+
+    public static void merge(Student[] arr, int left, int mid, int right) {
+        // Find sizes of two subarrays to be merged
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+
+        // Create temp arrays
+        Student[] L = new Student[n1];
+        Student[] R = new Student[n2];
+
+        // Copy data to temp arrays
+        for (int i = 0; i < n1; i++)
+            L[i] = arr[left + i];
+        for (int j = 0; j < n2; j++)
+            R[j] = arr[mid + 1 + j];
+
+        // Merge the temp arrays
+
+        // Initial indexes of first and second subarrays
+        int i = 0, j = 0;
+
+        // Initial index of merged subarray array
+        int k = left;
+        while (i < n1 && j < n2) {
+            if (L[i].studentID <= R[j].studentID) {
+                arr[k] = L[i];
+                i++;
+            } else {
+                arr[k] = R[j];
+                j++;
+
+            }
+            k++;
+        }
+
+        // Copy remaining elements of L[] if any
+        while (i < n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+
+        // Copy remaining elements of R[] if any
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+
     public static void heapSort(Student[] arr) {
         int n = arr.length;
 
@@ -142,12 +244,25 @@ public class StudentDatabase {
 
         // Sorting the student records using heap sort
         heapSort(students);
+        quickSort(students, numStudents, numStudents);
+        mergeSort(students, 0, numStudents - 1);
+
 
         // Displaying sorted student details
         System.out.println("\nSorted Student Records:");
         for (Student student : students) {
             System.out.println(student);
         }
+
+        // System.out.println("\nSorted Student Records:");
+        // for (int i = 0; i < numStudents; i++) {
+        //     System.out.println(students[i]);
+        // }
+
+        // System.out.println("\nSorted Student Records:");
+        // for (int i = 0; i < numStudents; i++) {
+        //     System.out.println(students[i]);
+        // }
 
         // Searching for a student by ID (Using Binary Search)
         System.out.print("\nEnter the Student ID to search: ");
